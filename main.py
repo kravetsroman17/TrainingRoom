@@ -79,6 +79,7 @@ def run_regression(n_classes):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
     model = LinearRegression().fit(X_train, y_train)
+    print(model.get_params())
 
     y_pred = model.predict(X_test)
     for i in range(len(y_pred)):
@@ -103,8 +104,8 @@ def run_clustering(n_clusters):
 if __name__ == '__main__':
     friendly_format_parser()
 
-    #run_regression(2)
+    run_regression(2)
     #run_regression(5)
     #run_clustering(2)
     #run_clustering(5)
-    run_clustering(8)
+    #run_clustering(8)
